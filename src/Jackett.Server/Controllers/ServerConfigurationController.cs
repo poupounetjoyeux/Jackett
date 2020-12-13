@@ -103,6 +103,13 @@ namespace Jackett.Server.Controllers
                 webHostRestartNeeded = true;
             }
 
+            if (config.flaresolverrurl != serverConfig.FlareSolverrUrl)
+            {
+                serverConfig.FlareSolverrUrl = config.flaresolverrurl;
+                configService.SaveConfig(serverConfig);
+                webHostRestartNeeded = true;
+            }
+
             serverConfig.UpdateDisabled = updateDisabled;
             serverConfig.UpdatePrerelease = preRelease;
             serverConfig.BasePathOverride = basePathOverride;

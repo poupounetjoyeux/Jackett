@@ -98,6 +98,7 @@ function loadJackettSettings() {
         $("#jackett-allowupdate").attr('checked', data.updatedisabled);
         $("#jackett-prerelease").attr('checked', data.prerelease);
         $("#jackett-logging").attr('checked', data.logging);
+        $("#jackett-flaresolverrurl").val(data.flaresolverrurl);
 
         $("#jackett-cache-enabled").attr('checked', data.cache_enabled);
         $("#jackett-cache-ttl").val(data.cache_ttl);
@@ -1134,6 +1135,7 @@ function bindUIButtons() {
         var jackett_update = $("#jackett-allowupdate").is(':checked');
         var jackett_prerelease = $("#jackett-prerelease").is(':checked');
         var jackett_logging = $("#jackett-logging").is(':checked');
+        var jackett_flaresolverr_url = $("#jackett-flaresolverrurl").val();
         var jackett_cache_enabled = $("#jackett-cache-enabled").is(':checked');
         var jackett_cache_ttl = $("#jackett-cache-ttl").val();
         var jackett_cache_max_results_per_indexer = $("#jackett-cache-max-results-per-indexer").val();
@@ -1155,6 +1157,7 @@ function bindUIButtons() {
             logging: jackett_logging,
             basepathoverride: jackett_basepathoverride,
             logging: jackett_logging,
+            flaresolverrurl: jackett_flaresolverr_url,
             cache_enabled: jackett_cache_enabled,
             cache_ttl: jackett_cache_ttl,
             cache_max_results_per_indexer: jackett_cache_max_results_per_indexer,

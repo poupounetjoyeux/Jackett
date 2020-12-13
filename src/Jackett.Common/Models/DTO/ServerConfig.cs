@@ -18,6 +18,8 @@ namespace Jackett.Common.Models.DTO
         [DataMember]
         public string blackholedir { get; set; }
         [DataMember]
+        public string flaresolverrurl { get; set; }
+        [DataMember]
         public bool updatedisabled { get; set; }
         [DataMember]
         public bool prerelease { get; set; }
@@ -67,6 +69,7 @@ namespace Jackett.Common.Models.DTO
             password = string.IsNullOrEmpty(config.AdminPassword) ? string.Empty : config.AdminPassword.Substring(0, 10);
             logging = config.RuntimeSettings.TracingEnabled;
             basepathoverride = config.BasePathOverride;
+            flaresolverrurl = config.FlareSolverrUrl;
             cache_enabled = config.CacheEnabled;
             cache_ttl = config.CacheTtl;
             cache_max_results_per_indexer = config.CacheMaxResultsPerIndexer;

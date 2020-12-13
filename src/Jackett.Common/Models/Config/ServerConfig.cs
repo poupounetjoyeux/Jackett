@@ -39,6 +39,7 @@ namespace Jackett.Common.Models.Config
         public bool UpdateDisabled { get; set; }
         public bool UpdatePrerelease { get; set; }
         public string BasePathOverride { get; set; }
+        public string FlareSolverrUrl { get; set; }
         public bool CacheEnabled { get; set; }
         public long CacheTtl { get; set; }
         public long CacheMaxResultsPerIndexer { get; set; }
